@@ -29,6 +29,7 @@ export function TasksList({ tasks, toggleTaskDone, removeTask }: TasksListProps)
         return (
           <ItemWrapper index={index}>
             <View>
+              
               <TouchableOpacity
                 testID={`button-${index}`}
                 activeOpacity={0.7}
