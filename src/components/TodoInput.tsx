@@ -11,7 +11,8 @@ export function TodoInput({ addTask }: TodoInputProps) {
 
   function handleAddNewTask() {
     if(task == '') return;
-    addTask(task)
+    addTask(task);
+    setTask('');
   }
   return (
     <View style={styles.inputContainer}>
@@ -23,12 +24,14 @@ export function TodoInput({ addTask }: TodoInputProps) {
         selectionColor="#666666"
         onChangeText={setTask}
         onSubmitEditing={handleAddNewTask}
+        value={task}
         //TODO - use value, onChangeText and onSubmitEditing props
       />
       <TouchableOpacity
         testID="add-new-task-button"
         activeOpacity={0.7}
         style={styles.addButton}
+        onPress={handleAddNewTask}
         //TODO - onPress prop
       >
         <Icon name="chevron-right" size={24} color="#B2B2B2" />
