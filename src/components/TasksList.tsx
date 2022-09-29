@@ -16,9 +16,11 @@ interface TasksListProps {
   tasks: Task[];
   toggleTaskDone: (id: number) => void;
   removeTask: (id: number) => void;
+  editTask: (taskId: number, taskNewTitle: string) => void;
 }
 
-export function TasksList({ tasks, toggleTaskDone, removeTask }: TasksListProps) {
+export function TasksList({ tasks, toggleTaskDone, removeTask, editTask }: TasksListProps) {
+  console.log(editTask)
   return (
     <FlatList
       data={tasks}
@@ -103,7 +105,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   taskText: {
-    color: '#666',
+    color: '#d0d0d0',
     fontFamily: 'Inter-Medium'
   },
   taskMarkerDone: {

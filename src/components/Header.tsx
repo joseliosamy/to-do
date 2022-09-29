@@ -10,7 +10,6 @@ interface HeaderProps {
 
 export function Header({ tasksCounter }: HeaderProps) {
   const tasksCounterText = tasksCounter == 1 ? 'tarefa' : 'tarefas';
-  console.log(tasksCounter)
   return (
     <View style={styles.container}>
       <Image source={logoImg} />
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
     paddingTop: getStatusBarHeight(true) + 16,
     paddingHorizontal: 24,
     paddingBottom: 60,
-    backgroundColor: '#8257E5',
+    backgroundColor: '#55d897',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row'
